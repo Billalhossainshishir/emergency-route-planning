@@ -26,26 +26,29 @@ src/
 tests/
   tests.c
   tests.h
+
+Makefile
 ```
 
-## Build
+## Build and run
 
-With GCC:
-
-```bash
-gcc -std=c11 -Wall -Wextra src/graph.c src/priority_queue.c src/search.c src/main.c tests/tests.c -Isrc -Itests -o route_planner
-```
-
-Run the demo:
+Using `make`:
 
 ```bash
+make
 ./route_planner
 ```
 
 Run the test suite:
 
 ```bash
-./route_planner --tests
+make test
+```
+
+Or compile directly with GCC:
+
+```bash
+gcc -std=c11 -Wall -Wextra src/graph.c src/priority_queue.c src/search.c src/main.c tests/tests.c -Isrc -Itests -o route_planner
 ```
 
 ## Example approach
